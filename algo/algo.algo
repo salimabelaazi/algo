@@ -1,0 +1,22 @@
+ALGORITHM algo
+VAR
+    str : STRING :="hi how are you."
+    c : CHAR :=""
+    nb_char : INTEGER := 0
+    nb_word : INTEGER := 0
+    nb_vow : INTEGER := 0
+BEGIN
+    WHILE (c <> ".") DO
+        read(c)
+        nb_char := nb_char + 1
+        IF (c="a" OR c="i" OR c="e" OR c="o" OR c="u") THEN
+            nb_vow := nb_vow + 1
+        END_IF
+        IF (c = " ") THEN
+            nb_word := nb_word + 1
+        END_IF
+    END_WHILE
+    write("Number of characters", nb_char+1)
+    write("Number of vowels", nb_vow)
+    write("number of words", nb_word+1)
+END
